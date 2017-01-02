@@ -8,7 +8,7 @@ TODO : Please provide a detailed project description.
 
 ## Web Site
 
-![My Project](https://infinite-brushlands-87048.herokuapp.com/)
+[![Workout DVD Reviews by Brian](http://2.gravatar.com/avatar/de2ae7576c1b5e262c787dc3c201418d)](https://infinite-brushlands-87048.herokuapp.com/)
 
 ## Key Features
 
