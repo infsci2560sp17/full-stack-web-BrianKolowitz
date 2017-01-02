@@ -10,7 +10,8 @@ TODO : Please provide a detailed project description.
 
 [Workout DVD's by Brian](https://infinite-brushlands-87048.herokuapp.com/)
 
-![](http://2.gravatar.com/avatar/de2ae7576c1b5e262c787dc3c201418d)
+![](http://2.gravatar.com/avatar/de2ae7576c1b5e262c787dc3c201418d.png)
+
 
 ## Key Features
 
