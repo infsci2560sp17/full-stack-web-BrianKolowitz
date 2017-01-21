@@ -1,4 +1,4 @@
-# Online Opinions about At Home Workouts
+# WORKINGout
 
 1. What is the proposed name for your Web application?
     - WORKINGout
@@ -22,7 +22,7 @@
 
 ## Web Site
 
-[Workout DVD's by Brian](https://infinite-brushlands-87048.herokuapp.com/)
+[WORKINGout](https://infinite-brushlands-87048.herokuapp.com/)
 
 ![](http://2.gravatar.com/avatar/de2ae7576c1b5e262c787dc3c201418d.png)
 
