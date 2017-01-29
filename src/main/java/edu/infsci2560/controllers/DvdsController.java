@@ -17,13 +17,13 @@ import org.springframework.web.servlet.ModelAndView;
  * @author kolobj
  */
 @Controller
-public class HelloController {
+public class DvdsController {
     @Autowired
     private DvdRepository repository;
     
-    @RequestMapping(value = "hello", method = RequestMethod.GET)
+    @RequestMapping(value = "dvds", method = RequestMethod.GET)
     public ModelAndView index() {        
-        return new ModelAndView("hello", "dvds", repository.findAll());
+        return new ModelAndView("dvds", "dvds", repository.findAll());
     }
     
 }

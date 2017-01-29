@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.infsci2560.controllers;
+package edu.infsci2560.services;
 
 import edu.infsci2560.models.Dvd;
 import edu.infsci2560.models.Dvd.WorkoutType;
@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @RestController
 @RequestMapping("/public/api/dvds")
-public class DvdController {
+public class DvdsService {
 
     @Autowired
     private DvdRepository repository;
