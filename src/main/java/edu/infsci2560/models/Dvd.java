@@ -31,24 +31,24 @@ public class Dvd {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
-    protected String name;
+    protected String title;
     protected WorkoutType workoutType;
 
     public Dvd() {
         this.id = Long.MAX_VALUE;
-        this.name = null;
+        this.title = null;
         this.workoutType = WorkoutType.Unknown;
     }
 
     public Dvd(Long id, String name, WorkoutType workoutType) {
         this.id = id;
-        this.name = name;
+        this.title = name;
         this.workoutType = workoutType;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", name=" + this.name + ", workoutType=" + this.workoutType + " ]";
+        return "[ id=" + this.id + ", title=" + this.title + ", workoutType=" + this.workoutType + " ]";
     }
 
     @Override
@@ -64,15 +64,15 @@ public class Dvd {
     /**
      * @return the name
      */
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
     /**
-     * @param name the name to set
+     * @param title the name to set
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     /**

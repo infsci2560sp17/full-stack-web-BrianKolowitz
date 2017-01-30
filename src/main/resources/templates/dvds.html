@@ -15,12 +15,25 @@
                 </tr>
                 <tr data-th-each="dvd : ${dvds}">
                     <td data-th-text="${dvd.id}"></td>
-                    <td data-th-text="${dvd.name}"></td>
+                    <td data-th-text="${dvd.title}"></td>
                     <td data-th-text="${dvd.workoutType}"></td>
                 </tr>
             </table>
         </div>
         
+        <hr />
+        Add DVD<br />
+        <form data-th-action="@{/dvds/add}" name="addDvdForm" method="post">
+            Title: <input type="text" name="title" /><br />
+            Workout Type:<br />
+            <input type="radio" name="workoutType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="workoutType" value="Strength" /> Strength<br />
+            <input type="radio" name="workoutType" value="Cardio" /> Cardio<br />
+            <input type="radio" name="workoutType" value="CrossTrain" /> CrossTrain<br />
+            <input type="submit" value="Add Workout"/>
+        </form>
+        
+        <hr />       
         <form data-th-action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
