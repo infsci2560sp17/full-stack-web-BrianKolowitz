@@ -28,3 +28,6 @@ nbdist/
 
 ## VSCode ###
 .vscode
+
+## other project folders ##
+upload-dir/
