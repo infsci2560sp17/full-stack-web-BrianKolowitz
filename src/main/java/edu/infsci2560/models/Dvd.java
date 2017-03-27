@@ -40,9 +40,9 @@ public class Dvd {
         this.workoutType = WorkoutType.Unknown;
     }
 
-    public Dvd(Long id, String name, WorkoutType workoutType) {
+    public Dvd(Long id, String title, WorkoutType workoutType) {
         this.id = id;
-        this.title = name;
+        this.title = title;
         this.workoutType = workoutType;
     }
 

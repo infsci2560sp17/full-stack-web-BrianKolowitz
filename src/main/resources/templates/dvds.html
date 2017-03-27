@@ -17,6 +17,7 @@
                     <td data-th-text="${dvd.id}"></td>
                     <td data-th-text="${dvd.title}"></td>
                     <td data-th-text="${dvd.workoutType}"></td>
+                    <td><a data-th-href="@{/dvds/edit/{id}(id=${dvd.id})}">edit</a></td>
                 </tr>
             </table>
         </div>
@@ -26,7 +27,7 @@
         <form data-th-action="@{/dvds/add}" name="addDvdForm" method="post">
             Title: <input type="text" name="title" /><br />
             Workout Type:<br />
-            <input type="radio" name="workoutType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="workoutType" value="Unknown" /> Unknown<br />
             <input type="radio" name="workoutType" value="Strength" /> Strength<br />
             <input type="radio" name="workoutType" value="Cardio" /> Cardio<br />
             <input type="radio" name="workoutType" value="CrossTrain" /> CrossTrain<br />
