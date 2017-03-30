@@ -32,7 +32,7 @@
 TODO : Please list key features of your project.
 
 * File Upload
-* Key Feature 2
+* DVD Rating
 * Key Feature N
 
 ## Project Details
