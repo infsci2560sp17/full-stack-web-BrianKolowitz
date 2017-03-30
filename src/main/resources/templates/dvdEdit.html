@@ -9,8 +9,9 @@ and open the template in the editor.
         <title>Edit DVD</title>
     </head>
     <body>
-        Add DVD<br />
+        Edit DVD<br />
         <form data-th-action="@{/dvds/edit/{id}(id=${dvd.id})}" data-th-object="${dvd}" data-th-method="put" role="form">
+            Id: <span data-th-utext="${dvd.id}" /><br />
             Title: <input type="text" name="title" data-th-value="${dvd.title}" /><br />
             Workout Type:<br />
             <input type="radio" name="workoutType" value="Unknown" /> Unknown<br />
@@ -18,7 +19,23 @@ and open the template in the editor.
             <input type="radio" name="workoutType" value="Cardio" /> Cardio<br />
             <input type="radio" name="workoutType" value="CrossTrain" /> CrossTrain<br />
             <input type="submit" value="Update Workout"/><br />
-            workoutType: <span data-th-value="${dvd.getWorkoutType()}" />
+            workoutType: <span data-th-utext="${dvd.workoutType}" />
         </form>
+        <br />
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>DVD Id</th>
+                    <th>Customer Id</th>
+                    <th>stars</th>
+                </tr>                
+                <tr data-th-each="rating : ${ratings}">
+                    <td data-th-text="${rating.ratingPk.dvdId}"></td>
+                    <td data-th-text="${rating.ratingPk.customerId}"></td>
+                    <td data-th-text="${rating.stars}"></td>
+                </tr>
+            </table>
+        </div>
+        
     </body>
 </html>

@@ -15,6 +15,8 @@ import javax.persistence.Embeddable;
  */
 @Embeddable
 public class RatingPk implements Serializable {
+    // http://www.thejavageek.com/2014/05/01/jpa-embeddedid-example/
+    
     private Long dvdId;
     private Long customerId;
     

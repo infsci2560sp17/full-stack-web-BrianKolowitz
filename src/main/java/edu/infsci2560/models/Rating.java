@@ -16,7 +16,7 @@ import javax.persistence.Entity;
 public class Rating {
     
     @EmbeddedId
-    private RatingPk id;
+    private RatingPk ratingPk;
         
     private int stars;
     
@@ -24,23 +24,23 @@ public class Rating {
         
     }
     
-    public Rating(RatingPk id, int stars) {
-        this.id = id;
+    public Rating(RatingPk ratingPk, int stars) {
+        this.ratingPk = ratingPk;
         this.stars = stars;
     }
 
     /**
      * @return the id
      */
-    public RatingPk getId() {
-        return id;
+    public RatingPk getRatingPk() {
+        return ratingPk;
     }
 
     /**
-     * @param id the id to set
+     * @param ratingPk the id to set
      */
-    public void setId(RatingPk id) {
-        this.id = id;
+    public void setRatingPk(RatingPk ratingPk) {
+        this.ratingPk = ratingPk;
     }
 
     /**

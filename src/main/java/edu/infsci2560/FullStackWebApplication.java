@@ -1,8 +1,13 @@
 package edu.infsci2560;
 
+import edu.infsci2560.models.Customer;
 import edu.infsci2560.models.Dvd;
 import edu.infsci2560.models.Dvd.WorkoutType;
+import edu.infsci2560.models.Rating;
+import edu.infsci2560.models.RatingPk;
+import edu.infsci2560.repositories.CustomerRepository;
 import edu.infsci2560.repositories.DvdRepository;
+import edu.infsci2560.repositories.RatingRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,10 +27,20 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
-        DvdRepository repository = ctx.getBean(DvdRepository.class);
-        repository.save(new Dvd(1L, "P90X", WorkoutType.CrossTrain));
-        repository.save(new Dvd(2L, "Insanity", WorkoutType.Cardio));
-        repository.save(new Dvd(3L, "Body Beast", WorkoutType.Strength));
+        DvdRepository dvdRepo = ctx.getBean(DvdRepository.class);
+        dvdRepo.save(new Dvd(1L, "P90X", WorkoutType.CrossTrain));
+        dvdRepo.save(new Dvd(2L, "Insanity", WorkoutType.Cardio));
+        dvdRepo.save(new Dvd(3L, "Body Beast", WorkoutType.Strength));
+        
+        CustomerRepository customerRepo = ctx.getBean(CustomerRepository.class);
+        customerRepo.save(new Customer(1L, "Bill", "Smith"));
+        customerRepo.save(new Customer(2L, "Jane", "Doe"));
+        customerRepo.save(new Customer(3L, "Dr", "K"));
+        
+        RatingRepository ratingRepo = ctx.getBean(RatingRepository.class);
+        ratingRepo.save(new Rating(new RatingPk(1L, 1L), 3));
+        ratingRepo.save(new Rating(new RatingPk(2L, 1L), 2));
+        ratingRepo.save(new Rating(new RatingPk(1L, 2L), 4));
     }
 
 
