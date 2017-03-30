@@ -14,13 +14,17 @@ and open the template in the editor.
             Id: <span data-th-utext="${dvd.id}" /><br />
             Title: <input type="text" name="title" data-th-value="${dvd.title}" /><br />
             Workout Type:<br />
-            <input type="radio" name="workoutType" value="Unknown" /> Unknown<br />
-            <input type="radio" name="workoutType" value="Strength" /> Strength<br />
-            <input type="radio" name="workoutType" value="Cardio" /> Cardio<br />
-            <input type="radio" name="workoutType" value="CrossTrain" /> CrossTrain<br />
+            <div data-th-each="elem: ${T(edu.infsci2560.models.Dvd.WorkoutType).values()}">
+                <input type="radio" 
+                       data-th-name="workoutType" 
+                       data-th-value="${elem.name()}" 
+                       data-th-checked="${elem} eq ${T(edu.infsci2560.models.Dvd.WorkoutType).valueOf(dvd.workoutType)}">
+                    <span data-th-utext="${elem.name()}" />
+                </input>
+            </div>
             <input type="submit" value="Update Workout"/><br />
-            workoutType: <span data-th-utext="${dvd.workoutType}" />
         </form>
+                
         <br />
         <div>
             <table style="border: 1px solid black">
