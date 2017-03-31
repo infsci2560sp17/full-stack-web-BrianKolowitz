@@ -18,6 +18,11 @@
                     <td data-th-text="${dvd.title}"></td>
                     <td data-th-text="${dvd.workoutType}"></td>
                     <td><a data-th-href="@{/dvds/edit/{id}(id=${dvd.id})}">edit</a></td>
+                    <td>
+                        <form data-th-object="${dvd}" data-th-action="@{/dvds/{id}(id=${dvd.id})}" data-th-method="delete">
+                            <input type="submit" value="delete" />
+                        </form>
+                    </td>
                 </tr>
             </table>
         </div>

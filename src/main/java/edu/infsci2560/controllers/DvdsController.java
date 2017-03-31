@@ -42,4 +42,13 @@ public class DvdsController {
         repository.save(dvd);
         return new ModelAndView("dvds", "dvds", repository.findAll());
     }
+    
+    @RequestMapping(value = "dvds/{id}", 
+            method = RequestMethod.DELETE, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
+    public ModelAndView delete( @Valid Dvd dvd, BindingResult result) {
+        repository.delete(dvd);
+        return new ModelAndView("dvds", "dvds", repository.findAll());
+    }        
 }
