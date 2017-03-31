@@ -10,7 +10,11 @@ and open the template in the editor.
     </head>
     <body>
         Edit DVD<br />
-        <form data-th-action="@{/dvds/edit/{id}(id=${dvd.id})}" data-th-object="${dvd}" data-th-method="put" role="form">
+        <form 
+            data-th-action="@{/dvds/edit/{id}(id=${dvd.id})}" 
+            data-th-object="${dvd}" 
+            data-th-method="put" 
+            role="form">
             Id: <span data-th-utext="${dvd.id}" /><br />
             Title: <input type="text" name="title" data-th-value="${dvd.title}" /><br />
             Workout Type:<br />

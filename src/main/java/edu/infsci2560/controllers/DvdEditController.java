@@ -31,7 +31,7 @@ public class DvdEditController {
     private RatingRepository ratingRepository; 
     
     @RequestMapping(value = "dvds/edit/{id}", method = RequestMethod.GET)
-    public ModelAndView index(@PathVariable Long id) {                 
+    public ModelAndView index(@PathVariable Long id) {    
         ModelAndView mv = new ModelAndView("dvdEdit");
         Dvd dvd = dvdRepository.findOne(id);
         mv.addObject("dvd", dvd);
@@ -40,7 +40,10 @@ public class DvdEditController {
         return mv;
     }
     
-    @RequestMapping(value = "dvds/edit/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    @RequestMapping(value = "dvds/edit/{id}", 
+            method = RequestMethod.PUT, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
     public String update( @Valid Dvd dvd, BindingResult result) {
         dvdRepository.save(dvd);
         return "redirect:/dvds";

@@ -19,7 +19,7 @@ public class Customer {
     private String firstName;
     private String lastName;
 
-    protected Customer() {}
+    public Customer() {}
 
     public Customer(Long id, String firstName, String lastName) {
         this.id = id;
@@ -73,5 +73,4 @@ public class Customer {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
 }

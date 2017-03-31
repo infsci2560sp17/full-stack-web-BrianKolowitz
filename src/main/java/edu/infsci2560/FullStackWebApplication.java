@@ -31,16 +31,19 @@ public class FullStackWebApplication {
         dvdRepo.save(new Dvd(1L, "P90X", WorkoutType.CrossTrain));
         dvdRepo.save(new Dvd(2L, "Insanity", WorkoutType.Cardio));
         dvdRepo.save(new Dvd(3L, "Body Beast", WorkoutType.Strength));
+        dvdRepo.save(new Dvd(4L, "T25", WorkoutType.Strength));
         
         CustomerRepository customerRepo = ctx.getBean(CustomerRepository.class);
         customerRepo.save(new Customer(1L, "Bill", "Smith"));
         customerRepo.save(new Customer(2L, "Jane", "Doe"));
         customerRepo.save(new Customer(3L, "Dr", "K"));
+        customerRepo.save(new Customer(4L, "Dr", "X"));
         
         RatingRepository ratingRepo = ctx.getBean(RatingRepository.class);
         ratingRepo.save(new Rating(new RatingPk(1L, 1L), 3));
         ratingRepo.save(new Rating(new RatingPk(2L, 1L), 2));
         ratingRepo.save(new Rating(new RatingPk(1L, 2L), 4));
+        ratingRepo.save(new Rating(new RatingPk(1L, 4L), 5));
     }
 
 
