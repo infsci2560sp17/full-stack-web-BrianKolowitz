@@ -33,7 +33,7 @@ TODO : Please list key features of your project.
 
 * File Upload
 * DVD Rating
-* Key Feature N
+* Delete DVDs
 
 ## Project Details
 
