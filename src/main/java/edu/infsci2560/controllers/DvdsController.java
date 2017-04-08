@@ -25,10 +25,12 @@ import org.springframework.web.servlet.ModelAndView;
 public class DvdsController {
     @Autowired
     private DvdRepository repository;
-    
+       
     
     @RequestMapping(value = "dvds", method = RequestMethod.GET)
-    public ModelAndView index() {        
+    public ModelAndView index() {    
+        ModelAndView mv = new ModelAndView("dvds");
+        mv.addObject("dvds", repository.findAll());
         return new ModelAndView("dvds", "dvds", repository.findAll());
     }
     
